@@ -1,0 +1,11 @@
+.main-content {
+    display: flex;
+
+    &-main {
+        width: 60%;
+    }
+
+    &-aside {
+        width: 40%;
+    }
+}
