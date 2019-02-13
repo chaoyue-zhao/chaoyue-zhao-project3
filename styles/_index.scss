@@ -1,11 +1,12 @@
 .main-content {
     display: flex;
+    justify-content: space-between;
 
     &-main {
         width: 60%;
     }
 
     &-aside {
-        width: 40%;
+        width: 30%;
     }
 }
