@@ -16,13 +16,23 @@
     </header>
     <div class="main-content wrapper">
         <main class="main-content-main mondrian">
-
+            <!-- space for mondrian elements -->
         </main>
         <aside class="main-content-aside">
             <form action="#" class="user-control" name="user-control">
-                <label for="number-of-elements" name="number-of-elements">Please Select the Number of Elements you would like to have in your Mondrian:</label>
-                <input type="range" min="5" max="30" range="1" id="number-of-elements">
+                <label for="number-of-elements" name="number-of-elements" class="user-control-label">Select the Number of Elements you would like to have in your Mondrian:</label>
+                <input type="range" min="10" max="30" range="1" id="number-of-elements" class="user-control-input">
                 
+                <fieldset class="color-of-elements">
+                    <label for="color-1" name="color-1" class="user-control-label">Select your first primary color:</label>
+                    <input type="color" name="color-1" class="user-control-input">
+
+                    <label for="color-2" name="color-2" class="user-control-label">Select your second primary color:</label>
+                    <input type="color" name="color-2" class="user-control-input">
+
+                    <label for="color-3" name="color-3" class="user-control-label">Select your third primary color:</label>
+                    <input type="color" name="color-3" class="user-control-input">
+                </fieldset>
 
                 <button type="submit">Create a Mondrian</button>
             </form>

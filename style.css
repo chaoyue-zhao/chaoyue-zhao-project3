@@ -248,4 +248,13 @@ html {
 .vertical-span-5 {
   grid-row: span 5;
 }
+
+.user-control-input {
+  margin: 0 auto;
+  display: block;
+}
+
+.user-control-label {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
