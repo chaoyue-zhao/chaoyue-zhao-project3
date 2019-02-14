@@ -24,10 +24,10 @@ mondrianApp.gatherUsersInput = function() {
     for (i = 1; i <= mondrianApp.$number; i++) {
       mondrianApp.mondrian.push({
         //using the random number generated as width and height
-        width: mondrianApp.randomNum(5),
-        height: mondrianApp.randomNum(5),
+        width: mondrianApp.randomNum(5,1),
+        height: mondrianApp.randomNum(5,1),
         //randomly select a color off the color array
-        color: mondrianApp.$color[mondrianApp.randomNum(mondrianApp.$color.length-1)],
+        color: mondrianApp.$color[mondrianApp.randomNum((mondrianApp.$color.length-1),0)],
       });
     }
     console.log (mondrianApp.mondrian);
@@ -56,8 +56,8 @@ mondrianApp.renderHTML = function () {
 };
 
 //write a function that generate a random number 
-mondrianApp.randomNum = function (max) {
-    return Math.floor(Math.random() * max) + 1;
+mondrianApp.randomNum = function (max, min) {
+    return Math.floor(Math.random() * max) + min;
 }
 
 mondrianApp.handleSubmit = function () {
