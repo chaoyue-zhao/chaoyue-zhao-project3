@@ -14,16 +14,23 @@ mondrianApp.gatherUsersInput = function() {
     mondrianApp.$color = [
         $("input[name=color-1]").val(),
         $("input[name=color-2]").val(),
-        $("input[name=color-3]").val()
+        $("input[name=color-3]").val(),
+        //off-white color
+        "#FAFAFA",
+        //off-black color
+        "#232323"
     ];
-    
+
     for (i = 1; i <= mondrianApp.$number; i++) {
       mondrianApp.mondrian.push({
         //using the random number generated as width and height
         width: mondrianApp.randomNum(5),
-        height: mondrianApp.randomNum(5)
+        height: mondrianApp.randomNum(5),
+        //randomly select a color off the color array
+        color: mondrianApp.$color[mondrianApp.randomNum(mondrianApp.$color.length-1)],
       });
     }
+    console.log (mondrianApp.mondrian);
 };
 
 //write a function that render to the DOM
@@ -36,12 +43,15 @@ mondrianApp.renderHTML = function () {
     mondrianApp.gatherUsersInput();
     mondrianApp.mondrian.forEach(function(element){
 
-            mondrianApp.$mondrian.append(`
-            <div class = "horizontal-span-${
-              element.width
-            } vertical-span-${element.height} element">element
-            </div>
-        `);
+        //create element based on the width and height randomized (see css for defined span value)
+        mondrianApp.$mondrian.append(`
+        <div class = "horizontal-span-${element.width} vertical-span-${element.height} element">element</div>`);
+
+        $(".element").css("background-color", `${element.color}`);
+        
+
+        const index = mondrianApp.mondrian.indexOf((mondrianApp.mondrian[mondrianApp.randomNum(mondrianApp.mondrian.length - 1)]))
+        console.log(index);
     });
 };
 
@@ -63,7 +73,6 @@ mondrianApp.init = function () {
     CACHE DA SELECTORS
     *********************/
     mondrianApp.$mondrian = $(".mondrian");
-    mondrianApp.$element = $(".element");
     mondrianApp.$form = $(".user-control"); 
     
     mondrianApp.handleSubmit();
