@@ -26,7 +26,7 @@ mondrianApp.gatherUsersInput = function() {
         //using the random number generated as width and height
         width: mondrianApp.randomNum(5,1),
         height: mondrianApp.randomNum(5,1),
-        //randomly select a color off the color array
+        //randomly select a color off the color array. this has to start from 0 for all the colors to be selected. 
         color: mondrianApp.$color[mondrianApp.randomNum((mondrianApp.$color.length-1),0)],
       });
     }
@@ -50,6 +50,7 @@ mondrianApp.renderHTML = function () {
         mondrianApp.$mondrian.append(`
         <div class = "horizontal-span-${element.width} vertical-span-${element.height} element element-${index}"></div>`);
 
+        //use the color on the element as their background
         $(`.element-${index}`).css("background-color", `${element.color}`);
         
     });
