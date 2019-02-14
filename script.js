@@ -1,6 +1,3 @@
-/*********************************
- JUICY CODES TO GET DA APP GOING
-**********************************/
 const mondrianApp = {}; 
 
 //create a variable that store the data (list of elements) 
@@ -20,17 +17,18 @@ mondrianApp.gatherUsersInput = function() {
         //off-black color
         "#232323"
     ];
-
+    
+    mondrianApp.$name = $("input[type=text]").val();
+    
     for (i = 1; i <= mondrianApp.$number; i++) {
-      mondrianApp.mondrian.push({
-        //using the random number generated as width and height
-        width: mondrianApp.randomNum(5,1),
-        height: mondrianApp.randomNum(5,1),
-        //randomly select a color off the color array. this has to start from 0 for all the colors to be selected. 
-        color: mondrianApp.$color[mondrianApp.randomNum((mondrianApp.$color.length-1),0)],
-      });
+        mondrianApp.mondrian.push({
+            //using the random number generated as width and height
+            width: mondrianApp.randomNum(5,1),
+            height: mondrianApp.randomNum(5,1),
+            //randomly select a color off the color array. this has to start from 0 for all the colors to be selected. 
+            color: mondrianApp.$color[mondrianApp.randomNum((mondrianApp.$color.length-1),0)],
+        });
     }
-    console.log (mondrianApp.mondrian);
 };
 
 //write a function that render to the DOM
@@ -50,15 +48,31 @@ mondrianApp.renderHTML = function () {
         mondrianApp.$mondrian.append(`
         <div class = "horizontal-span-${element.width} vertical-span-${element.height} element element-${index}"></div>`);
 
+        $(`.element-${index}`).css("background-color", `${element.color}`);     
         //use the color on the element as their background
-        $(`.element-${index}`).css("background-color", `${element.color}`);
-        
     });
+
+    $(".message").append(`Congrats! You just made your Mondrian: Composition ${mondrianApp.romanNumerals(mondrianApp.$name)}`)
+    
 };
 
 //write a function that generate a random number 
 mondrianApp.randomNum = function (max, min) {
     return Math.floor(Math.random() * max) + min;
+}
+
+// write a function to covert numbers into roman numerals (adopted from https://www.selftaughtjs.com/algorithm-sundays-converting-roman-numerals/)
+mondrianApp.romanNumerals = function (num) {
+    let result = "";
+    const decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    const roman = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+    for (i = 0; i <= decimal.length; i++) {
+        while (num%decimal[i] < num) {
+            result += roman[i];
+            num -= decimal[i]
+        }
+    }
+    return result;
 }
 
 mondrianApp.handleSubmit = function () {
@@ -70,9 +84,6 @@ mondrianApp.handleSubmit = function () {
 
 mondrianApp.init = function () {
     
-    /*********************
-    CACHE DA SELECTORS
-    *********************/
     mondrianApp.$mondrian = $(".mondrian");
     mondrianApp.$form = $(".user-control"); 
     
