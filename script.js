@@ -41,17 +41,17 @@ mondrianApp.renderHTML = function () {
 
     //call the function to retrieve information from user
     mondrianApp.gatherUsersInput();
-    mondrianApp.mondrian.forEach(function(element){
+
+    mondrianApp.mondrian.forEach(function(element,index){
+        
+        index = mondrianApp.mondrian.indexOf(element);
 
         //create element based on the width and height randomized (see css for defined span value)
         mondrianApp.$mondrian.append(`
-        <div class = "horizontal-span-${element.width} vertical-span-${element.height} element">element</div>`);
+        <div class = "horizontal-span-${element.width} vertical-span-${element.height} element element-${index}"></div>`);
 
-        $(".element").css("background-color", `${element.color}`);
+        $(`.element-${index}`).css("background-color", `${element.color}`);
         
-
-        const index = mondrianApp.mondrian.indexOf((mondrianApp.mondrian[mondrianApp.randomNum(mondrianApp.mondrian.length - 1)]))
-        console.log(index);
     });
 };
 
