@@ -1,4 +1,9 @@
-@import "styles/setup";
-@import "styles/index";
-@import "styles/mondrian";
-@import "styles/form";
+@import "styles/abstracts/variables";
+
+@import "styles/base/setup";
+@import "styles/base/typography";
+
+@import "styles/components/mondrian";
+@import "styles/components/form";
+
+@import "styles/pages/index";

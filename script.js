@@ -35,7 +35,7 @@ mondrianApp.gatherUsersInput = function() {
 mondrianApp.renderHTML = function () {
     //VERY VERY IMPORTANT TO DO BOTH: you want clear both the DOM and your array
     mondrianApp.mondrian = [];
-    $(".mondrian").empty();
+    mondrianApp.$mondrian.empty();
 
     //call the function to retrieve information from user
     mondrianApp.gatherUsersInput();
@@ -52,7 +52,7 @@ mondrianApp.renderHTML = function () {
         //use the color on the element as their background
     });
 
-    $(".message").append(`Congrats! You just made your Mondrian: Composition ${mondrianApp.romanNumerals(mondrianApp.$name)}`)
+    $(".message").html(`Congrats! You just made your Mondrian: Composition ${mondrianApp.romanNumerals(mondrianApp.$name)}`)
     
 };
 
@@ -75,6 +75,38 @@ mondrianApp.romanNumerals = function (num) {
     return result;
 }
 
+// the script of the range value bubble is adopted from https://css-tricks.com/value-bubbles-for-range-inputs/
+
+mondrianApp.outputRange = function () {
+    mondrianApp.$range.change(function(){
+        
+        //this = input[type = range];
+        const el = $(this);
+        
+        //get the width of range input; 
+        const width = el.width();
+        
+        //calculate the location of the value bubble using percentage between the left and right of input
+        const newPoint = (el.val() - el.attr("min")) / (el.attr("max") - el.attr("min"));
+        
+        let offset = 0;
+        
+        let newPlace;
+        // prevent value bubble from going beyond left or right 
+        if (newPoint < 0) { newPlace = 0;}
+        else if (newPoint > 1) {newPlace = width;}
+        // using the percentage calculating above to set the location of the value bubble
+        else { newPlace = width * newPoint + offset; offset -= newPoint}
+        
+        console.log(el);
+
+        el.next("output").css({
+            "left": newPlace,
+            "margin-left": offset + "%"
+        }).text(el.val())
+    })
+}
+
 mondrianApp.handleSubmit = function () {
     mondrianApp.$form.on("submit", function(event) {
         event.preventDefault();
@@ -86,8 +118,13 @@ mondrianApp.init = function () {
     
     mondrianApp.$mondrian = $(".mondrian");
     mondrianApp.$form = $(".user-control"); 
+    mondrianApp.$range = $("input[type=range]");
     
     mondrianApp.handleSubmit();
+
+    mondrianApp.outputRange();
+
+    mondrianApp.$range.trigger("change");
 };
 
 $(document).ready(function(){

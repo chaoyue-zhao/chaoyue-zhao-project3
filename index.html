@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="image/png" href="assets/favicon.jpg" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Mondrian in Style</title>
 </head>
@@ -22,6 +23,7 @@
             <form action="#" class="user-control" name="user-control">
                 <label for="number-of-elements" name="number-of-elements" class="user-control-label">Select the Number of Elements you would like to have in your Mondrian:</label>
                 <input type="range" min="10" max="30" range="1" id="number-of-elements" class="user-control-input">
+                <output for="number-of-elements"></output>
                 
                 <fieldset class="color-of-elements">
                     <label for="color-1" name="color-1" class="user-control-label">Select your first primary color:</label>
@@ -35,7 +37,7 @@
                 </fieldset>
 
                 <label for="name-of-mondrian" name="name-of-mondrian" class="user-control-label">Enter a number to generate a name for Mondrian Piet Mondrian way.</label>
-                <input type="text" name="name-of-mondrian" class="user-control-label" placeholder="such as: 1920">
+                <input type="text" name="name-of-mondrian" class="user-control-label" placeholder="such as: 1920" required>
 
                 <button type="submit">Create a Mondrian</button>
             </form>
