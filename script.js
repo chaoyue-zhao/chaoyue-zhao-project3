@@ -97,14 +97,17 @@ mondrianApp.outputRange = function () {
         else if (newPoint > 1) {newPlace = width;}
         // using the percentage calculating above to set the location of the value bubble
         else { newPlace = width * newPoint + offset; offset -= newPoint}
-        
-        console.log(el);
 
+        //update the position of the thumb into the DOM
         el.next("output").css({
             "left": newPlace,
-            "margin-left": offset + "%"
+            "margin-left": offset + "%",
         }).text(el.val())
     })
+}
+
+mondrianApp.outputUpdate = function (value) {
+    mondrianApp.$range.val() = value;
 }
 
 mondrianApp.handleSubmit = function () {

@@ -1,0 +1,19 @@
+// range input mixins
+
+@mixin track {
+    width: $track-width;
+    height: $track-height;
+    cursor: pointer;
+    animate: 0.2s;
+}
+
+@mixin thumb {
+    border: $thumb-border-width solid $thumb-border-color;
+    border-radius: $thumb-border-radius;
+    height: $thumb-height;
+    width: $thumb-width;
+    background: $thumb-color;
+    cursor: pointer;
+}
+
+

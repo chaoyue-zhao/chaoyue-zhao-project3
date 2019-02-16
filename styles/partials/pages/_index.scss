@@ -1,0 +1,44 @@
+body {
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    box-shadow: $large-shadow;
+}
+
+body > * {
+    border: $small-border;
+}
+
+header {
+    height: 10vh;
+    grid-row: 1;
+    grid-column: 1 / -1;
+    padding: 0;
+}
+
+footer {
+    height: 5vh;
+    grid-row: 10;
+    grid-column: 1 / -1;
+
+    p {
+        margin: 0;
+    }
+}
+
+.main-content {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    grid-row: 2 / 9;
+    grid-column: 1 / -1;
+
+    &-main {
+        width: 60%;
+    }
+
+    &-aside {
+        width: 35%;
+    }
+}

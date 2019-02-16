@@ -1,0 +1,102 @@
+// the following styling are adopted from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/. I changed the css into scss myself. 
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: $thumb-height/2 0;
+    width: $track-width;
+    
+    &::-webkit-slider-runnable-track {
+        @include track;
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+        overflow: hidden;
+    }
+
+    &::-webkit-slider-thumb {
+        @include thumb;
+        -webkit-appearance: none;
+        margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+        background: lighten($track-color, $contrast);
+    }
+
+    &::-moz-range-track {
+        @include track;
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+    }
+
+    &::-moz-range-progress {
+        background: $red;
+    }
+
+    &::-moz-range-thumb {
+        @include thumb;
+    }
+
+    &::-ms-track {
+        @include track;
+        background: transparent;
+        border-color: transparent;
+        border-width: $thumb-width 0;
+        color: transparent;
+    }
+
+    &::-ms-fill-lower {
+        background: $red;
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius * 2;
+    }
+
+    &::-ms-fill-upper {
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius * 2;
+    }
+
+    &::-ms-thumb {
+        @include thumb;
+    }
+
+    &:focus::-ms-fill-lower {
+        background: $track-color;
+    }
+
+    &:focus::-ms-fill-upper {
+        background: lighten($track-color, $contrast);
+    }
+}
+
+// the styling of the range value bubble is adopted from https://css-tricks.com/value-bubbles-for-range-inputs/
+output {
+  background: $black;
+  color: $white;
+  // font: font-style font-variant font-weight font-size/line-height font-family;
+  font: 0.8rem/0.8rem $body-font;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+//CSS TRIANGLES!!!!!
+output:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid $black;
+  border-left: 5px solid transparent;
+  background-repeat: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
