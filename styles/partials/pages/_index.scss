@@ -3,7 +3,6 @@ body {
     display: grid; 
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    box-shadow: $large-shadow;
 }
 
 .main-content {
@@ -22,17 +21,18 @@ body {
     }
 
     &-description {
-        background: rgba(0,0,0,.7);
+        background: rgba(0,0,0,.8);
         padding: 1rem;
         position: absolute;
-        top: 20%;
-        left: 20%;  
-        right: 20%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 10;
         display: none;
 
         .paragraph {
             color: $white;
+            line-height: 1.6;
         }
     }
 }
