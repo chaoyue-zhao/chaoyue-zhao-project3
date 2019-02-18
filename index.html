@@ -55,15 +55,16 @@
           />
           <output for="number-of-elements"></output>
 
+          <!-- all the color pickers inside this app is powered by jscolor http://jscolor.com/ -->
           <fieldset class="color-of-elements">
             <div class="user-control-container">
                 <label for="color-1" name="color-1" class="user-control-label"
                   >Select your first primary color:</label
                 >
                 <input
-                  type="color"
+                  type="text"
                   name="color-1"
-                  class="user-control-input"
+                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
                   value="#BE432C"
                 />
             </div>
@@ -73,9 +74,9 @@
                   >Select your second primary color:</label
                 >
                 <input
-                  type="color"
+                  type="text"
                   name="color-2"
-                  class="user-control-input"
+                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
                   value="#E1BD58"
                 />
             </div>
@@ -85,9 +86,9 @@
                   >Select your third primary color:</label
                 >
                 <input
-                  type="color"
+                  type="text"
                   name="color-3"
-                  class="user-control-input"
+                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
                   value="#224270"
                 />
 
@@ -102,10 +103,10 @@
                 >Enter a number to generate the name for your Mondrian:</label
               >
               <input
-                type="text"
+                type="number"
                 name="name-of-mondrian"
                 class="user-control-input"
-                placeholder="such as: 1920"
+                placeholder="such as: 344"
                 required
               />
           </div>
@@ -125,6 +126,7 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/jscolor.js"></script>
   </body>
 </html>

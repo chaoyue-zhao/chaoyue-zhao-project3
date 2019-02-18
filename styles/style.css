@@ -278,10 +278,13 @@ footer {
   margin-top: 10%;
 }
 
-.user-control input[type=text] {
-  border: none;
-  border-bottom: 5px solid #232323;
-  width: 30%;
+.user-control input[type=number] {
+  border: 5px solid #232323;
+  width: 40%;
+}
+
+.user-control .jscolor {
+  cursor: pointer;
 }
 
 .message {

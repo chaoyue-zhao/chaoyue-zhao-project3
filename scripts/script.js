@@ -48,16 +48,16 @@ mondrianApp.gatherUsersInput = function() {
     //get the user's input from the DOM
     mondrianApp.$number = $("input[type=range]").val();
     mondrianApp.$color = [
-        $("input[name=color-1]").val(),
-        $("input[name=color-2]").val(),
-        $("input[name=color-3]").val(),
+        "#" + $("input[name=color-1]").val(),
+        "#" + $("input[name=color-2]").val(),
+        "#" + $("input[name=color-3]").val(),
         //off-white color
         "#FAFAFA",
         //off-black color
         "#232323"
     ];
     
-    mondrianApp.$name = $("input[type=text]").val();
+    mondrianApp.$name = $("input[type=number]").val();
     
     for (i = 1; i <= mondrianApp.$number; i++) {
         mondrianApp.mondrian.push({
@@ -131,6 +131,9 @@ mondrianApp.init = function () {
     mondrianApp.$form = $(".user-control"); 
     mondrianApp.$range = $("input[type=range]");
     
+    //to create a Mondrian when page loads;
+    mondrianApp.renderHTML();
+
     mondrianApp.handleSubmit();
 
     mondrianApp.outputRange();

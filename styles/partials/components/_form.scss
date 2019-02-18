@@ -35,10 +35,13 @@
     margin-top: 10%;
   }
 
-  input[type=text] {
-    border: none;
-    border-bottom: $small-border;
-    width: 30%;
+  input[type=number] {
+    border: $small-border;
+    width: 40%;
+  }
+
+  .jscolor {
+    cursor: pointer;
   }
 }
 
