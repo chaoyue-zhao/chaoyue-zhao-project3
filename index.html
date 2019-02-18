@@ -24,14 +24,11 @@
       <div class="wrapper">
         <h1>Mondrian in Style</h1>
         <button class="header-nav-button description-open-button button">
-            What is this?
+          What is this?
         </button>
       </div>
     </header>
     <div class="main-content wrapper">
-      <main class="main-content-main mondrian">
-        <!-- space for mondrian elements -->
-      </main>
       <section class="description">
         <p class="paragraph">
           A
@@ -47,19 +44,41 @@
             class="links"
             >Piet Mondrian</a
           >
-          is a composition made of with simple elements, such as squares and rectangles defined by vertical and horizontal lines. The canvas is typically small and uses only the simplest of colours: red, blue, yellow, black and white. Piet named his initial Mondrians with roman numerals. This app allows you to create your own Mondrian by selecting the number and colours of elements and name your creation in the Piet Mondrian way. 
+          is a composition made of with simple elements, such as squares and
+          rectangles defined by vertical and horizontal lines. The canvas is
+          typically small and uses only the simplest of colours: red, blue,
+          yellow, black and white. Piet named his initial Mondrians with roman
+          numerals. This app allows you to create your own Mondrian by selecting
+          the number and colours of elements and name your creation in the Piet
+          Mondrian way.
         </p>
-        <p class="paragraph"> The idea of this app was inspired by <a href="https://labs.jensimmons.com/2017/01-011.html" class="links">Jen Simmon's Web Design Experiment</a>. In her original experiment, Jen deconstructed the original Mondrian artwork elements and reconstructed them together with CSS Grid. This app is an interactive version of the experiment. With the power of Javascript, the app randomly generates a Mondrian every time you click "Create a Mondrian" and the Mondrian is rearranged as you resize the browser. In other words, you are creating art together with the computer. Pretty cool, huh? 
+        <p class="paragraph">
+          The idea of this app was inspired by
+          <a href="https://labs.jensimmons.com/2017/01-011.html" class="links"
+            >Jen Simmon's Web Design Experiment</a
+          >. In her original experiment, Jen deconstructed the original Mondrian
+          artwork elements and reconstructed them together with CSS Grid. This
+          app is an interactive version of the experiment. With the power of
+          Javascript, the app randomly generates a Mondrian every time you click
+          "Create a Mondrian" and the Mondrian is rearranged as you resize the
+          browser. In other words, you are creating art together with the
+          computer. Pretty cool, huh?
         </p>
-        <button class="description-close-button button">Cool! Let's go back to making art!</button>
+        <button class="description-close-button button">
+          Cool! Let's go back to making art!
+        </button>
       </section>
+      <main class="main-content-main mondrian">
+        <!-- space for mondrian elements -->
+      </main>
       <aside class="main-content-aside">
         <form action="#" class="user-control" name="user-control">
           <label
             for="number-of-elements"
             name="number-of-elements"
             class="user-control-label"
-            >Select the Number of Elements you would like to have in your Mondrian:</label
+            >Select the Number of Elements you would like to have in your
+            Mondrian:</label
           >
           <input
             type="range"
@@ -76,7 +95,10 @@
 
           <!-- all the color pickers inside this app is powered by jscolor http://jscolor.com/ -->
           <fieldset class="color-of-elements">
-            <p class="paragraph-2 paragraph"> Author's Note: black and white are already included in the colour palette. Feel free to pick something else! </p>
+            <p class="paragraph-2 paragraph">
+              Author's Note: black and white are already included in the colour
+              palette. Feel free to pick something else!
+            </p>
             <div class="user-control-container">
               <label for="color-1" name="color-1" class="user-control-label"
                 >Select your first colour:</label
@@ -155,5 +177,3 @@
     <script src="scripts/jscolor.js"></script>
   </body>
 </html>
-
-

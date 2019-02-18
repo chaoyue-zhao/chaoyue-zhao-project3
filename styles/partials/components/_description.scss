@@ -8,8 +8,20 @@
     z-index: 10;
     display: none;
 
+    @include media (500px) {
+        background: $white;
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
     .paragraph {
         color: $white;
         line-height: 1.6;
+
+        @include media (500px) {
+            color: $black;
+        }
     }
 }

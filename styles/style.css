@@ -223,6 +223,12 @@ h1 {
   background: #BE432C;
 }
 
+@media (max-width: 500px) {
+  .links {
+    color: #232323;
+  }
+}
+
 .footer-paragraph {
   font: 0.7rem "Josefin Sans", sans-serif;
   margin: 0;
@@ -257,9 +263,26 @@ h1 {
   display: none;
 }
 
+@media (max-width: 500px) {
+  .description {
+    background: #FAFAFA;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .description .paragraph {
   color: #FAFAFA;
   line-height: 1.6;
+}
+
+@media (max-width: 500px) {
+  .description .paragraph {
+    color: #232323;
+  }
 }
 
 footer {

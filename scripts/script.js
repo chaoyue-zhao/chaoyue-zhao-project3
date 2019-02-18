@@ -46,19 +46,13 @@ mondrianApp.outputUpdate = function (value) {
 // function to display description on click 
 
 mondrianApp.displayMessage = function () {
-    if (window.matchMedia("(min-width: 500px").matches) {
-        $(".description-open-button").on("click", function () {
-            $(".description").show();
-        })
+    $(".description-open-button").on("click", function () {
+        $(".description").show();
+    })
 
-        $(".description-close-button").on("click", function () {
-            $(".description").hide();
-        })
-    } else {
-        $(".description-open-button").slideToggle
-    }
-
-    
+    $(".description-close-button").on("click", function () {
+        $(".description").hide();
+    })
 }
 //write a function to push objects (element) to the Mondrian array 
 mondrianApp.gatherUsersInput = function() {
