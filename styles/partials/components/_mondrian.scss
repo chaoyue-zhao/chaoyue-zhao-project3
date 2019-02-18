@@ -1,5 +1,6 @@
 .mondrian {
     max-width: 940px;
+    height: 80vh;
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
     grid-auto-rows: repeat(auto-fill, 50px);

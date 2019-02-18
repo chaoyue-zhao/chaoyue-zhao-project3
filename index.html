@@ -1,58 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="image/png" href="assets/favicon.jpg" rel="icon">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/range-input.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link type="image/png" href="assets/favicon.jpg" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/range-input.css" />
     <title>Mondrian in Style</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="wrapper">
-            <h1>Mondrian in Style</h1>
-        </div>
+      <div class="wrapper">
+        <h1>Mondrian in Style</h1>
+      </div>
     </header>
     <div class="main-content wrapper">
-        <main class="main-content-main mondrian">
-            <!-- space for mondrian elements -->
-        </main>
-        <aside class="main-content-aside">
-            <form action="#" class="user-control" name="user-control">
-                <label for="number-of-elements" name="number-of-elements" class="user-control-label">Select the Number of Elements you would like to have in your Mondrian:</label>
-                <input type="range" min="10" max="30" step="1" aria-valuemin="10" aria-valuemax = "30" oninput = "mondrianApp.outputUpdate(value)" id="number-of-elements" class="user-control-input">
-                <output for="number-of-elements"></output>
-                
-                <fieldset class="color-of-elements">
-                    <label for="color-1" name="color-1" class="user-control-label">Select your first primary color:</label>
-                    <input type="color" name="color-1" class="user-control-input" value="#BE432C">
+      <main class="main-content-main mondrian">
+        <!-- space for mondrian elements -->
+    </main>
+    <aside class="main-content-aside">
+        <p class="paragraph main-content-description">
+            A
+            <a href="https://www.khanacademy.org/humanities/ap-art-history/later-europe-and-americas/modernity-ap/a/mondrian-composition"
+                class="links">Mondrian</a>, initially created by Dutch painter
+            <a href="https://en.wikipedia.org/wiki/Piet_Mondrian" class="links">Piet Mondrian</a>
+            is a composition made of with simple elements (squares and
+            rectangles) with three primary colors, black and white. Piet
+            named his initial Mondrian with roman numerals. Follow the steps below to create your own: 
+        </p>
+        <form action="#" class="user-control" name="user-control">
+          <label
+            for="number-of-elements"
+            name="number-of-elements"
+            class="user-control-label"
+            >Select the Number of Elements you would like to have:</label
+          >
+          <input
+            type="range"
+            min="10"
+            max="30"
+            step="1"
+            aria-valuemin="10"
+            aria-valuemax="30"
+            oninput="mondrianApp.outputUpdate(value)"
+            id="number-of-elements"
+            class="user-control-input"
+          />
+          <output for="number-of-elements"></output>
 
-                    <label for="color-2" name="color-2" class="user-control-label">Select your second primary color:</label>
-                    <input type="color" name="color-2" class="user-control-input" value="#E1BD58">
+          <fieldset class="color-of-elements">
+            <div class="user-control-container">
+                <label for="color-1" name="color-1" class="user-control-label"
+                  >Select your first primary color:</label
+                >
+                <input
+                  type="color"
+                  name="color-1"
+                  class="user-control-input"
+                  value="#BE432C"
+                />
+            </div>
 
-                    <label for="color-3" name="color-3" class="user-control-label">Select your third primary color:</label>
-                    <input type="color" name="color-3" class="user-control-input" value="#224270">
-                </fieldset>
+            <div class="user-control-container">
+                <label for="color-2" name="color-2" class="user-control-label"
+                  >Select your second primary color:</label
+                >
+                <input
+                  type="color"
+                  name="color-2"
+                  class="user-control-input"
+                  value="#E1BD58"
+                />
+            </div>
 
-                <label for="name-of-mondrian" name="name-of-mondrian" class="user-control-label">Enter a number to generate a name for Mondrian Piet Mondrian way.</label>
-                <input type="text" name="name-of-mondrian" class="user-control-label" placeholder="such as: 1920" required>
+            <div class="user-control-container">
+                <label for="color-3" name="color-3" class="user-control-label"
+                  >Select your third primary color:</label
+                >
+                <input
+                  type="color"
+                  name="color-3"
+                  class="user-control-input"
+                  value="#224270"
+                />
 
-                <button type="submit">Create a Mondrian</button>
-            </form>
-            <p class="message">
-                <!-- placeholder for message -->
-            </p>
-        </aside>
+            </div>
+          </fieldset>
+
+          <div class="user-control-container">
+              <label
+                for="name-of-mondrian"
+                name="name-of-mondrian"
+                class="user-control-label"
+                >Enter a number to generate the name for your Mondrian:</label
+              >
+              <input
+                type="text"
+                name="name-of-mondrian"
+                class="user-control-label"
+                placeholder="such as: 1920"
+                required
+              />
+          </div>
+
+          <button type="submit" class="button user-control-button">Create a Mondrian</button>
+        </form>
+        <p class="message">
+          <!-- placeholder for message -->
+        </p>
+      </aside>
     </div>
     <footer>
-        <div class="wrapper">
-            <p>Copyright &copy; 2019 Chaoyue Zhao</p>
-        </div>
+      <div class="wrapper">
+        <p class="footer">The project was inspired by <a href="http://jensimmons.com/" class="links">Jen Simmon's</a> <a href="https://labs.jensimmons.com/2017/01-011.html" class="links">Web Design Experiments with CSS Grid on Mondrian.</a></p>
+        <p class="footer">Made with love <i class="fas fa-heart"></i> and <i class="fas fa-mug-hot"></i> tea at the beautiful city of Toronto. Copyright &copy; 2019 Chaoyue Zhao</p>
+      </div>
     </footer>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -6,10 +6,6 @@ body {
     box-shadow: $large-shadow;
 }
 
-body > * {
-    border: $small-border;
-}
-
 header {
     height: 10vh;
     grid-row: 1;
@@ -17,20 +13,10 @@ header {
     padding: 0;
 }
 
-footer {
-    height: 5vh;
-    grid-row: 10;
-    grid-column: 1 / -1;
-
-    p {
-        margin: 0;
-    }
-}
-
 .main-content {
     height: 80vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     grid-row: 2 / 9;
     grid-column: 1 / -1;
 
@@ -40,5 +26,9 @@ footer {
 
     &-aside {
         width: 35%;
+    }
+
+    &-description {
+       width: 100%;
     }
 }

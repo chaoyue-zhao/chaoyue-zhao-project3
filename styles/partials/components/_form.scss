@@ -1,18 +1,43 @@
 .user-control {
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   position: relative;
 
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
   &-input {
-    margin: 10px auto;
-    display: block;
+    margin: 10px 0;
+  }
+  
+  &-label {
+    margin: 10px 0;
+    padding: 0;
+  }
+  
+  &-button {
+    margin: 10px 0;
   }
 
-  &-label {
-    width: 100%;
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 
   input[type=range]{
-    margin-top: 12%;
+    margin-top: 10%;
   }
+
+  input[type=text] {
+    border: none;
+    border-bottom: $small-border;
+    width: 30%;
+  }
+  
+
 }
+
 

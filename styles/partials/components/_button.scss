@@ -1,0 +1,16 @@
+.button {
+   font-family: $heading-font;
+   font-size: 1rem;
+   color: $black; 
+   background: $white;
+   padding: 5px 10px;
+   border: $small-border;
+   margin: 10px;
+   
+   &:hover,
+   &:focus {
+       background: $red;
+       color: $white;
+   }
+
+}
