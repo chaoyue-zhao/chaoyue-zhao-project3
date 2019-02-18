@@ -16,4 +16,9 @@
     cursor: pointer;
 }
 
+@mixin media($screen-size) {
+@media (max-width: $screen-size) {
+    @content;
+}
+}
 

@@ -1,14 +1,21 @@
 .header {
     height: 10vh;
-    grid-row: 1;
-    grid-column: 1 / -1;
-    
+
+    @include media (500px) {
+        height: auto;
+        text-align: center;
+    }
     
     .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media(500px) {
+            display: block;
+        }
     }
+
 }
 
 

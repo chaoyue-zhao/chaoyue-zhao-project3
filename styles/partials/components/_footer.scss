@@ -1,6 +1,14 @@
 footer {
     margin: 20px 0;
     height: 5vh;
-    grid-row: 10;
-    grid-column: 1 / -1;
+
+    @include media (500px){
+        height: auto;
+        margin: 10px 0;
+        
+        .footer-paragraph {
+            margin: 10px 0;       
+        }
+    }
+
 }

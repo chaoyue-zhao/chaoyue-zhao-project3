@@ -1,38 +1,38 @@
 body {
     height: 100vh;
-    display: grid; 
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+
+    @include media (500px){
+        height: auto;
+    }
 }
 
 .main-content {
     height: 80vh;
+    max-height: 80vh;
     display: flex;
     justify-content: space-between;
-    grid-row: 2 / 9;
-    grid-column: 1 / -1;
+
+    @include media (500px){
+        height: auto;
+        max-height: none;
+        flex-direction: column;
+    }
 
     &-main {
         width: 60%;
+
+        @include media (500px) {
+            height: auto;
+            width: 100%;
+        }
     }
 
     &-aside {
         width: 35%;
-    }
 
-    &-description {
-        background: rgba(0,0,0,.8);
-        padding: 1rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        display: none;
-
-        .paragraph {
-            color: $white;
-            line-height: 1.6;
+        @include media (500px) {
+            height: auto;
+            width: 100%;
         }
     }
 }

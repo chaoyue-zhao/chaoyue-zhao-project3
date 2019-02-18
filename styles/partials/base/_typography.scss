@@ -1,11 +1,19 @@
 body {
     font: 1rem $body-font;
+
+    @include media (500px) {
+        font-size: 90%;
+    }
 }
 
 h1 {
     font: 2.2rem $heading-font;
     text-transform: capitalize;
     margin: 10px 0;
+
+    @include media (500px) {
+        font-size: 1.4rem;  
+    }
 }
 
 .paragraph {
