@@ -9,8 +9,12 @@
       href="https://fonts.googleapis.com/css?family=Josefin+Sans|Limelight"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/range-input.css" />
     <title>Mondrian in Style</title>
@@ -19,28 +23,49 @@
     <header class="header">
       <div class="wrapper">
         <h1>Mondrian in Style</h1>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <button class="header-nav-button description-open-button button">
+                What is this?
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="main-content wrapper">
       <main class="main-content-main mondrian">
         <!-- space for mondrian elements -->
-    </main>
-    <aside class="main-content-aside">
-        <p class="paragraph main-content-description">
-            A
-            <a href="https://www.khanacademy.org/humanities/ap-art-history/later-europe-and-americas/modernity-ap/a/mondrian-composition" target="_blank"
-                class="links">Mondrian</a>, initially created by Dutch painter
-            <a href="https://en.wikipedia.org/wiki/Piet_Mondrian" target="_blank" class="links">Piet Mondrian</a>
-            is a composition made of with simple elements (squares and
-            rectangles) with three primary colors, black and white. Piet
-            named his initial Mondrian with roman numerals. Follow the steps below to create your own: 
+      </main>
+      <section class="main-content-description">
+        <p class="paragraph">
+          A
+          <a
+            href="https://www.khanacademy.org/humanities/ap-art-history/later-europe-and-americas/modernity-ap/a/mondrian-composition"
+            target="_blank"
+            class="links"
+            >Mondrian</a
+          >, initially created by and named after Dutch painter and theoretician
+          <a
+            href="https://en.wikipedia.org/wiki/Piet_Mondrian"
+            target="_blank"
+            class="links"
+            >Piet Mondrian</a
+          >
+          is a composition made of with simple elements, such as squares and rectangles defined by vertical and horizontal lines. The canvas is typically small and uses only the simplest of colours: red, blue, yellow, black and white. Piet named his initial Mondrians with roman numerals. This app allows you to create your own Mondrian by selecting the number and colours of elements and name your creation in the Piet Mondrian way. 
         </p>
+        <p class="paragraph"> The idea of this app was inspired by <a href="https://labs.jensimmons.com/2017/01-011.html" class="links">Jen Simmon's Web Design Experiment</a>. In her original experiment, Jen deconstructed the original Mondrian artwork elements and reconstructed them together with CSS Grid. This app is an interactive version of the experiment. With the power of Javascript, the app randomly generates a Mondrian every time you click "Create a Mondrian" and the Mondrian is rearranged as you resize the browser. In other words, you are creating art together with the computer. Pretty cool, huh? 
+        </p>
+        <button class="description-close-button button">Cool! Let's go back to making art!</button>
+      </section>
+      <aside class="main-content-aside">
         <form action="#" class="user-control" name="user-control">
           <label
             for="number-of-elements"
             name="number-of-elements"
             class="user-control-label"
-            >Select the Number of Elements you would like to have:</label
+            >Select the Number of Elements you would like to have in your Mondrian:</label
           >
           <input
             type="range"
@@ -57,68 +82,74 @@
 
           <!-- all the color pickers inside this app is powered by jscolor http://jscolor.com/ -->
           <fieldset class="color-of-elements">
+            <p class="paragraph-2 paragraph"> Author's Note: black and white are already included in the colour palette. Feel free to pick something else! </p>
             <div class="user-control-container">
-                <label for="color-1" name="color-1" class="user-control-label"
-                  >Select your first primary color:</label
-                >
-                <input
-                  type="text"
-                  name="color-1"
-                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
-                  value="#BE432C"
-                />
+              <label for="color-1" name="color-1" class="user-control-label"
+                >Select your first colour:</label
+              >
+              <input
+                type="text"
+                name="color-1"
+                class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
+                value="#BE432C"
+              />
             </div>
 
             <div class="user-control-container">
-                <label for="color-2" name="color-2" class="user-control-label"
-                  >Select your second primary color:</label
-                >
-                <input
-                  type="text"
-                  name="color-2"
-                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
-                  value="#E1BD58"
-                />
+              <label for="color-2" name="color-2" class="user-control-label"
+                >Select your second colour:</label
+              >
+              <input
+                type="text"
+                name="color-2"
+                class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
+                value="#E1BD58"
+              />
             </div>
 
             <div class="user-control-container">
-                <label for="color-3" name="color-3" class="user-control-label"
-                  >Select your third primary color:</label
-                >
-                <input
-                  type="text"
-                  name="color-3"
-                  class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
-                  value="#224270"
-                />
-
+              <label for="color-3" name="color-3" class="user-control-label"
+                >Select your third colour:</label
+              >
+              <input
+                type="text"
+                name="color-3"
+                class="user-control-input jscolor{closable: true, closeText:'Close the color picker!'}"
+                value="#224270"
+              />
             </div>
           </fieldset>
 
           <div class="user-control-container">
-              <label
-                for="name-of-mondrian"
-                name="name-of-mondrian"
-                class="user-control-label"
-                >Enter a number to generate the name for your Mondrian:</label
-              >
-              <input
-                type="number"
-                name="name-of-mondrian"
-                class="user-control-input"
-                placeholder="such as: 344"
-                required
-              />
+            <label
+              for="name-of-mondrian"
+              name="name-of-mondrian"
+              class="user-control-label"
+              >Enter a number to generate the name for your Mondrian:</label
+            >
+            <input
+              type="number"
+              name="name-of-mondrian"
+              class="user-control-input"
+              placeholder="such as: 344"
+              required
+            />
           </div>
 
-          <button type="submit" class="button user-control-button">Create a Mondrian</button>
+          <button type="submit" class="button user-control-button">
+            Create a Mondrian
+          </button>
         </form>
       </aside>
     </div>
     <footer>
       <div class="wrapper">
-        <p class="footer">The project was inspired by <a href="http://jensimmons.com/" target="_blank" class="links">Jen Simmon's</a> <a href="https://labs.jensimmons.com/2017/01-011.html" target="_blank" class="links">Web Design Experiments with CSS Grid on Mondrian.</a></p>
-        <p class="footer">Made with love <i class="fas fa-heart"></i> and <i class="fas fa-mug-hot"></i> tea at the beautiful city of Toronto. Copyright &copy; 2019 Chaoyue Zhao</p>
+        <p class="footer-paragraph">
+          Made with love <i class="fas fa-heart"></i> and
+          <i class="fas fa-mug-hot"></i> tea at the beautiful city of Toronto.
+        </p>
+
+        <p class="footer-paragraph">Copyright &copy; 2019 Chaoyue Zhao.</p>
       </div>
     </footer>
     <script
@@ -130,3 +161,5 @@
     <script src="scripts/jscolor.js"></script>
   </body>
 </html>
+
+

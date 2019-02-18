@@ -6,12 +6,6 @@ body {
     box-shadow: $large-shadow;
 }
 
-header {
-    height: 10vh;
-    grid-row: 1;
-    grid-column: 1 / -1;
-}
-
 .main-content {
     height: 80vh;
     display: flex;
@@ -28,6 +22,17 @@ header {
     }
 
     &-description {
-       width: 100%;
+        background: rgba(0,0,0,.7);
+        padding: 1rem;
+        position: absolute;
+        top: 20%;
+        left: 20%;  
+        right: 20%;
+        z-index: 10;
+        display: none;
+
+        .paragraph {
+            color: $white;
+        }
     }
 }

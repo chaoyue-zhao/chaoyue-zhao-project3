@@ -42,6 +42,18 @@ mondrianApp.outputRange = function () {
 mondrianApp.outputUpdate = function (value) {
     mondrianApp.$range.val() = value;
 }
+
+// function to display description on click 
+
+mondrianApp.displayMessage = function () {
+    $(".description-open-button").on("click", function () {
+        $(".main-content-description").show();
+    })
+
+    $(".description-close-button").on("click", function () {
+        $(".main-content-description").hide();
+    })
+}
 //write a function to push objects (element) to the Mondrian array 
 mondrianApp.gatherUsersInput = function() {
 
@@ -139,6 +151,8 @@ mondrianApp.init = function () {
     mondrianApp.outputRange();
     //to create a default value display on page load
     mondrianApp.$range.trigger("change");
+
+    mondrianApp.displayMessage();
 };
 
 $(document).ready(function(){

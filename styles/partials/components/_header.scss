@@ -1,0 +1,21 @@
+.header {
+    height: 10vh;
+    grid-row: 1;
+    grid-column: 1 / -1;
+    
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-nav {
+    &-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
