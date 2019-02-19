@@ -5,6 +5,10 @@
     margin: $thumb-height/2 0;
     margin-top: 6%;
     width: $track-width;
+
+    @include media (700px){
+        margin-top: 10%;
+    }
     
     &::-webkit-slider-runnable-track {
         @include track;
