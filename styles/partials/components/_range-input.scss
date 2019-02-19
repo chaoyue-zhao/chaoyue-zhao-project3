@@ -1,8 +1,9 @@
 // the following styling are adopted from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/. I changed the css into scss myself. 
 
-input[type=range] {
+.user-control input[type=range] {
     -webkit-appearance: none;
     margin: $thumb-height/2 0;
+    margin-top: 6%;
     width: $track-width;
     
     &::-webkit-slider-runnable-track {
@@ -70,7 +71,7 @@ input[type=range] {
 }
 
 // the styling of the range value bubble is adopted from https://css-tricks.com/value-bubbles-for-range-inputs/
-output {
+.user-control output {
   background: $black;
   color: $white;
   // font: font-style font-variant font-weight font-size/line-height font-family;
@@ -82,14 +83,14 @@ output {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 11%;
+  top: 55%;
   left: 0;
   transform: translate(-50%, -50%);
 
 }
 
 //CSS TRIANGLES!!!!!
-output:after {
+.user-control output:after {
   content: "";
   position: absolute;
   width: 0;

@@ -73,25 +73,27 @@
       </main>
       <aside class="main-content-aside">
         <form action="#" class="user-control" name="user-control">
-          <label
-            for="number-of-elements"
-            name="number-of-elements"
-            class="user-control-label"
-            >Select the Number of Elements you would like to have in your
-            Mondrian:</label
-          >
-          <input
-            type="range"
-            min="10"
-            max="30"
-            step="1"
-            aria-valuemin="10"
-            aria-valuemax="30"
-            oninput="mondrianApp.outputUpdate(value)"
-            id="number-of-elements"
-            class="user-control-input"
-          />
-          <output for="number-of-elements"></output>
+          <div class="user-control-container">
+              <label
+                for="number-of-elements"
+                name="number-of-elements"
+                class="user-control-label"
+                >Select the Number of Elements you would like to have in your
+                Mondrian:</label
+              >
+              <input
+                type="range"
+                min="10"
+                max="30"
+                step="1"
+                aria-valuemin="10"
+                aria-valuemax="30"
+                oninput="mondrianApp.outputUpdate(value)"
+                id="number-of-elements"
+                class="user-control-input"
+              />
+              <output for="number-of-elements"></output>
+          </div>
 
           <!-- all the color pickers inside this app is powered by jscolor http://jscolor.com/ -->
           <fieldset class="color-of-elements">
@@ -147,7 +149,7 @@
               type="number"
               name="name-of-mondrian"
               class="user-control-input"
-              placeholder="such as: 344"
+              placeholder="such as: 13"
               required
             />
           </div>

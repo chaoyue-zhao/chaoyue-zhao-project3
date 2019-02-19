@@ -41,6 +41,7 @@ body {
         @include media (700px) {
             height: auto;
             width: 100%;
+            order: -1;
         }
     }
 }
