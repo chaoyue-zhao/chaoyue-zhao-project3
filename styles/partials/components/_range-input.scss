@@ -85,6 +85,10 @@ output {
   top: 14%;
   left: 0;
   transform: translate(-50%, -50%);
+
+  @include media (700px) {
+      top: 11%;
+  }
 }
 
 //CSS TRIANGLES!!!!!

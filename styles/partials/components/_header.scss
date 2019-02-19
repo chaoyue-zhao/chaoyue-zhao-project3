@@ -1,7 +1,7 @@
 .header {
     height: 10vh;
 
-    @include media (500px) {
+    @include media (700px) {
         height: auto;
         text-align: center;
     }
@@ -11,7 +11,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @include media(500px) {
+        @include media(700px) {
             display: block;
         }
     }

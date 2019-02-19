@@ -175,7 +175,13 @@ html {
   margin: 0 auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
   .wrapper {
     width: 90%;
   }
@@ -185,7 +191,7 @@ body {
   font: 1rem "Josefin Sans", sans-serif;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body {
     font-size: 90%;
   }
@@ -195,6 +201,12 @@ h1 {
   font: 2.2rem "Limelight", serif;
   text-transform: capitalize;
   margin: 10px 0;
+}
+
+@media (max-width: 1050px) {
+  h1 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -223,7 +235,7 @@ h1 {
   background: #BE432C;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .links {
     color: #232323;
   }
@@ -263,7 +275,7 @@ h1 {
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .description {
     background: #FAFAFA;
     position: static;
@@ -279,7 +291,7 @@ h1 {
   line-height: 1.6;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .description .paragraph {
     color: #232323;
   }
@@ -290,7 +302,7 @@ footer {
   height: 5vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   footer {
     height: auto;
     margin: 10px 0;
@@ -301,9 +313,13 @@ footer {
 }
 
 .user-control {
-  padding: 1rem 0;
   position: relative;
-  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .user-control {
+    text-align: center;
+  }
 }
 
 .user-control-container {
@@ -318,7 +334,7 @@ footer {
           align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .user-control-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -331,7 +347,7 @@ footer {
   margin: 5px 0 10px 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .user-control-input {
     width: 100%;
   }
@@ -348,7 +364,7 @@ footer {
   width: 50%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .user-control-label {
     width: 100%;
   }
@@ -364,23 +380,23 @@ footer {
   margin: 0;
 }
 
-.user-control input[type=range] {
+.user-control input[type="range"] {
   margin-top: 10%;
 }
 
-.user-control input[type=number] {
+.user-control input[type="number"] {
   border: 5px solid #232323;
   width: 40%;
   text-align: center;
 }
 
-@media (max-width: 500px) {
-  .user-control input[type=number] {
+@media (max-width: 700px) {
+  .user-control input[type="number"] {
     width: 60%;
   }
 }
 
-.user-control input[type=text] {
+.user-control input[type="text"] {
   border: 5px solid #232323;
   cursor: pointer;
   width: 40%;
@@ -391,7 +407,7 @@ footer {
   height: 10vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .header {
     height: auto;
     text-align: center;
@@ -410,7 +426,7 @@ footer {
           align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .header .wrapper {
     display: block;
   }
@@ -427,7 +443,7 @@ footer {
   border: 8px solid #232323;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .mondrian {
     min-height: 50vh;
     -ms-grid-columns: (minmax(30px, 1fr))[auto-fill];
@@ -611,6 +627,12 @@ output {
           transform: translate(-50%, -50%);
 }
 
+@media (max-width: 700px) {
+  output {
+    top: 11%;
+  }
+}
+
 output:after {
   content: "";
   position: absolute;
@@ -629,7 +651,7 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body {
     height: auto;
   }
@@ -646,7 +668,7 @@ body {
           justify-content: space-between;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main-content {
     height: auto;
     max-height: none;
@@ -661,7 +683,13 @@ body {
   width: 60%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
+  .main-content-main {
+    width: 55%;
+  }
+}
+
+@media (max-width: 700px) {
   .main-content-main {
     height: auto;
     width: 100%;
@@ -672,7 +700,13 @@ body {
   width: 35%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
+  .main-content-aside {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
   .main-content-aside {
     height: auto;
     width: 100%;

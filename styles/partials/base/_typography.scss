@@ -1,7 +1,7 @@
 body {
     font: 1rem $body-font;
 
-    @include media (500px) {
+    @include media (700px) {
         font-size: 90%;
     }
 }
@@ -10,6 +10,10 @@ h1 {
     font: 2.2rem $heading-font;
     text-transform: capitalize;
     margin: 10px 0;
+
+    @include media (1050px) {
+        font-size: 1.8rem;
+    }
 
     @include media (500px) {
         font-size: 1.4rem;  
@@ -35,7 +39,7 @@ h1 {
         background: $red;
     }
 
-    @include media (500px) {
+    @include media (700px) {
         color: $black;
     }
 }

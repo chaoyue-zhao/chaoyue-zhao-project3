@@ -1,7 +1,7 @@
 body {
     height: 100vh;
 
-    @include media (500px){
+    @include media (700px){
         height: auto;
     }
 }
@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    @include media (500px){
+    @include media (700px){
         height: auto;
         max-height: none;
         flex-direction: column;
@@ -21,7 +21,11 @@ body {
     &-main {
         width: 60%;
 
-        @include media (500px) {
+        @include media (1050px) {
+            width: 55%;
+        }
+
+        @include media (700px) {
             height: auto;
             width: 100%;
         }
@@ -30,7 +34,11 @@ body {
     &-aside {
         width: 35%;
 
-        @include media (500px) {
+        @include media (1050px) {
+            width: 40%;
+        }
+
+        @include media (700px) {
             height: auto;
             width: 100%;
         }

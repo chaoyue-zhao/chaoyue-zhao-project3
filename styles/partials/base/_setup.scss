@@ -13,7 +13,11 @@ html {
     width: 80%;
     margin: 0 auto;
 
-    @include media (500px) {
+    @include media (1050px) {
+        width: 85%;
+    }
+
+    @include media (700px) {
         width: 90%;
     }
 }
