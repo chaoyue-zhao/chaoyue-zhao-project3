@@ -1,6 +1,6 @@
 .user-control {
 
-  @include media(700px) {
+  @include media(870px) {
     text-align: center;
     margin-top: 1rem;
   }
@@ -12,7 +12,7 @@
     align-items: center;
     position: relative;
 
-    @include media(700px) {
+    @include media(870px) {
       flex-direction: column;
     }
   }
@@ -20,7 +20,7 @@
   &-input {
     margin: 5px 0 10px 0;
 
-    @include media(700px) {
+    @include media(870px) {
       width: 100%;
     }
 
@@ -34,7 +34,7 @@
     padding: 0;
     width: 50%;
 
-    @include media(700px) {
+    @include media(870px) {
       width: 100%;
     }
   }
@@ -58,7 +58,7 @@
     width: 40%;
     text-align: center;
 
-    @include media(700px) {
+    @include media(870px) {
       width: 60%;
     }
   }

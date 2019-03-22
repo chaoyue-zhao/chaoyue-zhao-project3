@@ -273,6 +273,9 @@ h1 {
   right: 10%;
   z-index: 10;
   display: none;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 @media (max-width: 1050px) {
@@ -312,8 +315,10 @@ footer {
   height: 5vh;
 }
 
-footer .fa-heart {
-  color: #BE432C;
+@media (max-width: 1180px) {
+  footer {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -326,7 +331,7 @@ footer .fa-heart {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .user-control {
     text-align: center;
     margin-top: 1rem;
@@ -348,7 +353,7 @@ footer .fa-heart {
   position: relative;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .user-control-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -361,7 +366,7 @@ footer .fa-heart {
   margin: 5px 0 10px 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .user-control-input {
     width: 100%;
   }
@@ -378,7 +383,7 @@ footer .fa-heart {
   width: 50%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .user-control-label {
     width: 100%;
   }
@@ -404,7 +409,7 @@ footer .fa-heart {
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .user-control input[type=number] {
     width: 60%;
   }
@@ -457,7 +462,7 @@ footer .fa-heart {
   border: 8px solid #232323;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .mondrian {
     min-height: 50vh;
     -ms-grid-columns: (minmax(30px, 1fr))[auto-fill];
@@ -696,7 +701,7 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   body {
     height: auto;
   }
@@ -713,7 +718,7 @@ body {
           justify-content: space-between;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .main-content {
     height: auto;
     max-height: none;
@@ -734,7 +739,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .main-content-main {
     height: auto;
     width: 100%;
@@ -751,7 +756,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 870px) {
   .main-content-aside {
     height: auto;
     width: 100%;

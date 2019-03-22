@@ -1,17 +1,17 @@
 footer {
-    margin: 20px 0;
-    height: 5vh;
+  margin: 20px 0;
+  height: 5vh;
 
-    .fa-heart {
-        color: $red;
-    }
+  @include media(1180px) {
+    margin-top: 2rem;
+  }
 
-    @include media (700px){
-        height: auto;
-        margin: 10px 0;
-        
-        .footer-paragraph {
-            margin: 10px 0;       
-        }
+  @include media(700px) {
+    height: auto;
+    margin: 10px 0;
+
+    .footer-paragraph {
+      margin: 10px 0;
     }
+  }
 }

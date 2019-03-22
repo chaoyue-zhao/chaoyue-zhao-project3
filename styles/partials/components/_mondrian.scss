@@ -6,7 +6,7 @@
     background: $black;
     border: $large-border;
 
-    @include media (700px) {
+    @include media (870px) {
         min-height: 50vh;
         grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
         grid-auto-rows: repeat(auto-fill, 30px);
